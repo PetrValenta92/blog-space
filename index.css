@@ -1,0 +1,78 @@
+/* ---------- CUSTOM PROPERTIES --------------- */
+/* RESET */
+/* CSS Reset https://andy-bell.co.uk/a-modern-css-reset/ */
+  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+  
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+     margin: 0;
+}
+  
+/* Set up body */
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+}
+  
+/* Make images easier to work with */
+img {
+    display: block;
+    object-fit: cover;
+}
+
+/* --------------- UTILITY CLASSES ------------------*/
+
+
+
+/* ----------------- TYPOGRAPHY ------------------- */
+
+h1 {
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* ---------------- LAYOUT -------------------- */
+
+header {
+    width: 100%;
+    min-height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid red;
+}
+
+main {
+    margin-top: 8rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 50rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
