@@ -19,7 +19,7 @@
     </header>
     <main>
       <div class="container">
-        <form class="rounded">
+        <form id="new-post" class="rounded">
           <label for="post-title">Title:</label>
           <input
             class="rounded"
@@ -35,7 +35,12 @@
             rows="6"
             class="rounded"
           ></textarea>
-          <input class="submit-btn rounded" type="submit" value="Post" />
+          <input
+            id="submit-btn"
+            class="submit-btn rounded"
+            type="submit"
+            value="Post"
+          />
         </form>
       </div>
       <div id="posts" class="posts container"></div>
