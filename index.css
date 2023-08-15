@@ -25,6 +25,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
+    background-color: #F2F2F2;
 }
   
 /* Make images easier to work with */
@@ -35,7 +36,15 @@ img {
 
 /* --------------- UTILITY CLASSES ------------------*/
 
+.container {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
 
+.rounded {
+    border-radius: .25rem;
+}
 
 /* ----------------- TYPOGRAPHY ------------------- */
 
@@ -49,6 +58,38 @@ h3 {
     font-size: 1.25rem;
 }
 
+label,
+.submit-btn {
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 500;   
+}
+
+/* ---------------- FORM -------------------- */
+
+form {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+    background: #56ab2f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+input, 
+textarea {
+    border: none;
+}
+
+.submit-btn {
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: .5rem;
+    cursor: pointer;
+}
+
 /* ---------------- LAYOUT -------------------- */
 
 header {
@@ -58,21 +99,19 @@ header {
     top: 0;
     left: 0;
     text-align: center;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fceabb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    border: 1px solid red;
 }
 
 main {
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
-.container {
-    width: 100%;
-    max-width: 50rem;
-    padding: 0 1rem;
-    margin: 0 auto;
+.posts {
+    padding: 1rem 1rem 0;
 }
