@@ -7,3 +7,12 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
             <p>${post.body}</p>
             <hr/>`).join("");    
     });
+
+document.getElementById("new-post").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = {
+        title: document.getElementById("post-title").value,
+        body: document.getElementById("post-body").value
+    };
+    console.log(data);
+});
