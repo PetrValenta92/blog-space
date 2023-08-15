@@ -80,6 +80,7 @@ form {
 input, 
 textarea {
     border: none;
+    padding: .375rem;
 }
 
 .submit-btn {
