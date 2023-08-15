@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
@@ -18,7 +18,27 @@
       <h1 class="title">BlogSpace</h1>
     </header>
     <main>
-      <div id="posts" class="container"></div>
+      <div class="container">
+        <form class="rounded">
+          <label for="post-title">Title:</label>
+          <input
+            class="rounded"
+            type="text"
+            id="post-title"
+            name="post-title"
+          />
+          <label for="post-body">Body:</label>
+          <textarea
+            name="post-body"
+            id="post-body"
+            cols="30"
+            rows="6"
+            class="rounded"
+          ></textarea>
+          <input class="submit-btn rounded" type="submit" value="Post" />
+        </form>
+      </div>
+      <div id="posts" class="posts container"></div>
     </main>
     <script src="index.js"></script>
   </body>
