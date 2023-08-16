@@ -14,5 +14,13 @@ document.getElementById("new-post").addEventListener("submit", (e) => {
         title: document.getElementById("post-title").value,
         body: document.getElementById("post-body").value
     };
-    console.log(data);
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    fetch('https://apis.scrimba.com/jsonplaceholder/posts', {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)        
+    })
+        .then(response => response.json())
+        .then(data => console.log(data));
 });
