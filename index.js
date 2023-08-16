@@ -1,12 +1,18 @@
+let postsArray = [];
+
+function render () {
+    document.getElementById("posts").innerHTML = postsArray.map((post) => 
+        `<h3>${post.title}</h3>
+        <p>${post.body}</p>
+        <hr/>`).join("");    
+}
+
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
-    .then(res => res.json())
-    .then(data => {
-        const postsArr = data.slice(0, 5);
-        document.getElementById("posts").innerHTML = postsArr.map((post) => 
-            `<h3>${post.title}</h3>
-            <p>${post.body}</p>
-            <hr/>`).join("");    
-    });
+        .then(res => res.json())
+        .then(data => {
+            postsArray = data.slice(0, 5);
+            render();
+});
 
 document.getElementById("new-post").addEventListener("submit", (e) => {
     e.preventDefault();
@@ -20,14 +26,10 @@ document.getElementById("new-post").addEventListener("submit", (e) => {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)        
-    })
-        .then(res => res.json())
-        .then(post => {
-            const newPostHtml = 
-                `<h3>${post.title}</h3>
-                <p>${post.body}</p>
-                <hr/>`
-
-            document.getElementById("posts").insertAdjacentHTML("afterbegin", newPostHtml);            
-        });
+        })
+            .then(res => res.json())
+            .then(post => {
+                postsArray.unshift(post)
+                render();    
+            });
 });
