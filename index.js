@@ -21,6 +21,13 @@ document.getElementById("new-post").addEventListener("submit", (e) => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(data)        
     })
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then(res => res.json())
+        .then(post => {
+            const newPostHtml = 
+                `<h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr/>`
+
+            document.getElementById("posts").insertAdjacentHTML("afterbegin", newPostHtml);            
+        });
 });
